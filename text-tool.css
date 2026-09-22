@@ -1,0 +1,355 @@
+/****************************************** 
+    Tool Styling (Start)
+******************************************/
+
+.tox-toolbar--scrolling::-webkit-scrollbar {
+    height: 6px;
+}
+
+.tox .tox-toolbar--scrolling {
+    flex-wrap: wrap !important;
+    overflow-x: unset !important;
+    justify-content: space-evenly;
+
+}
+
+.error-alert {
+    text-align: left;
+    color: red;
+}
+
+.error-alert ul li {
+    margin-bottom: 10px;
+}
+
+.privacy-disclaimer {
+    font-size: 14px;
+    color: #9da9b5;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.tool-section {
+    background-color: var(--color-skyblue);
+}
+
+.tool-area {
+    display: flex;
+}
+
+.flex-basis-50-per {
+    flex-basis: 50% !important;
+}
+
+.tool {
+    padding: 16px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 32px auto 0;
+    border-radius: 16px;
+    position: relative;
+}
+
+.drag-n-drop-text small {
+    font-size: var(--font-size-x-small);
+    font-weight: 400;
+    color: #9da9b5;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    width: min(400px, calc(100% - 1rem));
+}
+
+.browse-dropbtn {
+    border: none;
+    background: transparent;
+}
+
+.browse-dropbtn label {
+    height: 40px;
+    min-width: 130px;
+    border-radius: 8px;
+    padding: 8px 24px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.browse-dropbtn label span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.browse-btn .browse-drop-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    background: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0/0.2);
+    border-radius: var(--border-radius-default);
+    border: 1px solid #ccc;
+}
+
+.browse-btn .browse-drop-content label {
+    color: #000;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.browse-btn .browse-drop-content * {
+    font-size: var(--font-size-x-small);
+}
+
+.browse-btn .browse-drop-content a:hover {
+    background: #f1f1f1;
+}
+
+.js-toggle-choice img {
+    filter: invert(1);
+}
+
+.tool-grid {
+    display: grid;
+    gap: 16px;
+}
+
+@media (width <=768px) {
+    .tool {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    .tool.home {
+        padding: 1rem;
+    }
+}
+
+@media (width <=600px) {
+    .footer-cards-div .footer-card-row {
+        flex-direction: column;
+    }
+
+    .upload-action-btns {
+        justify-content: space-between;
+    }
+
+    .drag-n-drop-text {
+        display: none;
+    }
+
+    .before-upload {
+        bottom: 0;
+    }
+
+    .before-upload {
+        width: 100% !important;
+    }
+}
+
+@media (width <=425px) {
+    .upload-action-btns {
+        flex-direction: column;
+        gap: 0.725rem;
+    }
+
+    .upload-action-btns :is(.btn-UpCd, label) {
+        width: 100%;
+    }
+}
+
+@media (width <375px) {
+    .before-upload img {
+        display: none;
+    }
+}
+
+@media (width <=375px) {
+
+    .tool-grid {
+        display: block;
+    }
+
+    .tool {
+        margin-top: 5px;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .tool.home {
+        padding: unset;
+    }
+}
+
+/****************************************** 
+        Tool Styling (End)
+******************************************/
+
+h2,
+h2 * {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+h3,
+h3 * {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.tox .tox-notification--warn,
+.tox .tox-notification--warning {
+    display: none !important;
+}
+
+.tox .tox-editor-header {
+    z-index: 99 !important;
+}
+
+.upload-section {
+    padding: unset;
+    border-radius: var(--border-radius-large);
+    border: unset;
+    flex-basis: 100%;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.upload-section.dragover .before-upload {
+    pointer-events: none;
+}
+
+.form-control {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: unset;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.before-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    gap: 0;
+}
+
+.upload-area {
+    display: flex;
+    min-height: 350px;
+    cursor: text;
+    border: unset;
+    width: 100%;
+    flex-direction: column;
+}
+
+.drag-n-drop-text {
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    color: #000000;
+    line-height: 27px;
+    font-size: var(--font-size-default);
+}
+
+.action-btns {
+    margin-top: 13px;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background-color: steelblue;
+}
+
+.after-convert span {
+    column-gap: 1rem;
+}
+
+.reset-btn {
+    background-color: rgba(214, 92, 92, 0.492);
+    border: unset;
+    padding: 10px 20px;
+}
+
+.content-section :is(ol, ul) {
+    margin-left: 40px;
+}
+
+ol,
+ul:not(.model-feature-list) {
+    margin-left: 40px;
+}
+
+.content-section a {
+    color: var(--color-purple);
+}
+
+.tox:not([dir="rtl"]) .tox-statusbar__branding {
+    display: none;
+}
+
+#convert {
+    margin-top: unset;
+    border: none;
+    transition: 0.3s ease;
+}
+#convert:hover{
+    background-color: #262626;
+}
+
+.selection-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.review-stars{
+    width: fit-content;
+}
+.before-convert{
+    position: relative;
+}
+#cloudflare_container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+.tool-footer-elemets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 5px 0 0 0;
+    min-height: 24px;
+    flex-wrap: wrap;
+}
+.review-form{
+    z-index: 1;
+}
+@media (width <=520px) {
+    .selection-div {
+        padding-top: 20px;
+    }
+}

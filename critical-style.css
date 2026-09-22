@@ -1,0 +1,18 @@
+/* Roboto Variable Font: supports full weight range from 100 to 900 */
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("../fonts/roboto-variable.woff2") format("woff2");
+}
+
+/* Adjusted fallback to match Roboto dimensions and prevent CLS */
+@font-face {
+    font-family: "Roboto-Fallback";
+    src: local("Arial");
+    ascent-override: 92.7734%;
+    descent-override: 24.4141%;
+    line-gap-override: 0%;
+    size-adjust: 100%;
+}
